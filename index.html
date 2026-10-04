@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anushka Wijesundara</title>
+<meta name="description" content="Anushka Wijesundara, D.Eng. Unix and Linux infrastructure engineer and IoT security researcher in Tokyo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f9;--card:#fff;--ink:#17212b;--muted:#5f6f7a;--line:#e1e7ea;--brand:#003e4c;--accent:#f9aa3c;--chip:#eef4f5}
+@media (prefers-color-scheme:dark){:root{--bg:#0f161b;--card:#16212a;--ink:#e8eef1;--muted:#9aabb5;--line:#24323c;--brand:#5fb7c9;--accent:#f9aa3c;--chip:#1d2b35}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--brand)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{background:linear-gradient(135deg,#003e4c,#0c7c68);color:#fff;padding:56px 0 40px}
+header h1{margin:0;font-size:clamp(28px,5vw,42px);font-weight:700}
+header .degrees{font-size:15px;opacity:.85;font-weight:500}
+header p{max-width:680px;margin:14px 0 0;opacity:.92}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.links a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:7px 14px;border-radius:99px;font-size:14px;font-weight:600}
+.links a:hover{background:rgba(255,255,255,.15)}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:20px;overflow-x:auto;padding:12px 16px}
+nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:14px;white-space:nowrap}
+nav a:hover{color:var(--brand)}
+section{padding:36px 0 8px}
+h2{font-size:22px;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:6px;height:22px;border-radius:3px;background:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px}
+.stat{background:rgba(255,255,255,.12);border-radius:12px;padding:14px}
+.stat b{display:block;font-size:24px}
+.stat span{font-size:13px;opacity:.85}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px}
+.role{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px}
+.role h3{margin:0;font-size:17px}
+.org{color:var(--brand);font-weight:600;font-size:15px}
+.when{color:var(--muted);font-size:14px;white-space:nowrap}
+.card ul{margin:10px 0 0;padding-left:20px}
+.card li{margin:4px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);border-radius:99px;padding:5px 12px;font-size:13.5px;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.skill h3{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.pub{margin:0}
+.pub li{margin-bottom:12px}
+.muted{color:var(--muted)}
+footer{padding:36px 0;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Anushka Wijesundara <span class="degrees">D.Eng · M.Eng · BSc</span></h1>
+    <p>Unix and Linux infrastructure engineer with close to 10 years running mission-critical trading and financial systems across Japan, the UK and Sri Lanka. Doctor of Engineering researching decentralized firmware authentication for IoT. Fluent in English, Japanese and Sinhala.</p>
+    <div class="links">
+      <a href="mailto:anushka.bandara.wijesundara@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/anushkawijesundara/">LinkedIn</a>
+      <a href="https://github.com/awijesundara">GitHub</a>
+      <a href="#publications">Publications</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>~10 yrs</b><span>production Unix/Linux</span></div>
+      <div class="stat"><b>1000+</b><span>hosts patched &amp; upgraded</span></div>
+      <div class="stat"><b>6</b><span>peer-reviewed publications</span></div>
+      <div class="stat"><b>Tokyo</b><span>Kawaguchi, Saitama</span></div>
+    </div>
+  </div>
+</header>
+<nav><div class="wrap"><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#publications">Publications</a><a href="#certifications">Certifications</a><a href="#projects">Projects</a></div></nav>
+<main class="wrap">
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <div class="role"><div><h3>Unix System Administrator</h3><div class="org">SBI Japannext Securities · Roppongi, Tokyo</div></div><div class="when">Oct 2022 – Present</div></div>
+    <ul>
+      <li>Led trading-venue server builds: BIOS and firmware tuning for low-latency networking, CPU isolation, Onload, Solarflare and PTP.</li>
+      <li>Planned and executed OS and firmware upgrades across 1000+ production and pre-production hosts.</li>
+      <li>Migrated syslog infrastructure for 9 servers to Rocky Linux 8 with zero downtime.</li>
+      <li>Centralized DNS and access control for 1000+ hosts and 100+ users with FreeIPA.</li>
+      <li>Built Splunk audit dashboards across 500+ systems to cut incident investigation time.</li>
+      <li>Puppet and Ansible configuration management; OpenStack, oVirt, Isilon NAS and NetBackup.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="role"><div><h3>Senior Engineer, Unix</h3><div class="org">London Stock Exchange Group · Colombo</div></div><div class="when">Nov 2020 – Jun 2022</div></div>
+    <ul>
+      <li>Administered RHEL and Solaris across LSEG Capital Markets UK production infrastructure (Oracle SPARC, HP Blade).</li>
+      <li>Scheduled and ran patching with pre/post checks for LSE and MIT production; incident handling and vendor escalation.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="role"><div><h3>Systems Support Engineer</h3><div class="org">London Stock Exchange Group · Colombo</div></div><div class="when">Jul 2016 – Jun 2018</div></div>
+    <ul>
+      <li>Managed the LSEG MIT Tier 3 data center: VMware and RHEV, HP/Dell Blade provisioning, monitoring, security compliance, backup and redundancy.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="role"><div><h3>Research Engineer</h3><div class="org">Dialog Axiata Mobile Communications Research Lab · Moratuwa</div></div><div class="when">Nov 2014 – Jul 2016</div></div>
+    <ul>
+      <li>eZCash ATM on Raspberry Pi: NFC, voice guidance, OTK PIN verification and VPN connectivity.</li>
+      <li>Orange IoT Plug: ESP8266 MQTT smart plug for the Dialog IoT platform.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="role"><div><h3>Instructor</h3><div class="org">University of Moratuwa, Faculty of IT</div></div><div class="when">May 2014 – Nov 2014</div></div>
+  </div>
+  <div class="card">
+    <div class="role"><div><h3>IT Security Analyst (Intern)</h3><div class="org">PricewaterhouseCoopers · Colombo</div></div><div class="when">Nov 2013 – May 2014</div></div>
+  </div>
+</section>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card skill"><h3>Operating systems</h3><div class="chips"><span class="chip">RHEL</span><span class="chip">Rocky Linux</span><span class="chip">CentOS</span><span class="chip">Ubuntu</span><span class="chip">Solaris</span><span class="chip">Windows</span></div></div>
+    <div class="card skill"><h3>Automation</h3><div class="chips"><span class="chip">Puppet</span><span class="chip">Ansible</span><span class="chip">Python</span><span class="chip">Shell</span></div></div>
+    <div class="card skill"><h3>Low-latency trading</h3><div class="chips"><span class="chip">BIOS &amp; firmware tuning</span><span class="chip">CPU isolation</span><span class="chip">Onload</span><span class="chip">Solarflare</span><span class="chip">PTP</span></div></div>
+    <div class="card skill"><h3>Virtualization &amp; cloud</h3><div class="chips"><span class="chip">OpenStack</span><span class="chip">oVirt</span><span class="chip">VMware</span><span class="chip">Kubernetes</span><span class="chip">AWS</span><span class="chip">GCP</span></div></div>
+    <div class="card skill"><h3>Identity &amp; security</h3><div class="chips"><span class="chip">FreeIPA</span><span class="chip">AWS Identity Center</span><span class="chip">ISO 27001</span><span class="chip">Splunk</span></div></div>
+    <div class="card skill"><h3>Storage &amp; hardware</h3><div class="chips"><span class="chip">Isilon NAS</span><span class="chip">NetBackup</span><span class="chip">Dell &amp; HP Blade</span><span class="chip">Oracle SPARC</span></div></div>
+  </div>
+</section>
+<section id="education">
+  <h2>Education</h2>
+  <div class="card"><div class="role"><div><h3>Doctor of Engineering, Information and Communications Engineering</h3><div class="org">Institute of Science Tokyo (formerly Tokyo Institute of Technology)</div></div><div class="when">2020 – 2026</div></div><p class="muted">Decentralized Firmware Authentication for Smart Home IoT Devices. SPRING doctoral fellowship (MEXT), 2021–2024.</p></div>
+  <div class="card"><div class="role"><div><h3>Master of Engineering, Information and Communications Engineering</h3><div class="org">Tokyo Institute of Technology</div></div><div class="when">2018 – 2020</div></div><p class="muted">Security-enhanced firmware management for smart-home IoT using distributed ledgers. Excellent Research Concept Presentation Award, 2019.</p></div>
+  <div class="card"><div class="role"><div><h3>BSc, Computer Systems and Networking</h3><div class="org">Curtin University, Australia</div></div><div class="when">2012 – 2013</div></div><p class="muted">“WARM” wavefront autonomous room-mapping robot (second-best research project). Diploma in IT, SLIIT, 2008–2012.</p></div>
+</section>
+<section id="publications">
+  <h2>Publications</h2>
+  <div class="card"><ol class="pub">
+    <li><b>CBC-Provenance:</b> Contract-Bound Verifiable Credentials for Replay-Resistant OCI Image Provenance in Kubernetes. <i>Scientific Reports</i>, under revision, 2026.</li>
+    <li><b>DIDAuth-IoTFW:</b> Decentralized Firmware Authentication for Smart Home IoT Devices Using Verifiable Credentials. <i>Internet of Things</i>, 2025. <a href="https://doi.org/10.1016/j.iot.2025.101788">doi:10.1016/j.iot.2025.101788</a></li>
+    <li>Security-enhanced firmware management scheme for smart home IoT devices using distributed ledger technologies. <i>Int. J. Inf. Secur.</i>, 2024. <a href="https://doi.org/10.1007/s10207-024-00827-x">doi:10.1007/s10207-024-00827-x</a></li>
+    <li>Development of a firmware authenticating and updating scheme for smart home IoT devices using distributed ledger technologies. Computer Security Symposium, IPSJ, 2019. <a href="http://id.nii.ac.jp/1001/00201316/">id.nii.ac.jp</a></li>
+    <li>Application of Blockchain to Maintaining Patient Records in Electronic Health Record. <i>Healthc Inform Res</i>, 2020. <a href="https://doi.org/10.4258/hir.2020.26.1.3">doi:10.4258/hir.2020.26.1.3</a></li>
+    <li>Patient Consent Management by a Purpose-Based Consent Model for EHR Based on Blockchain. <i>Healthc Inform Res</i>, 2020. <a href="https://doi.org/10.4258/hir.2020.26.4.265">doi:10.4258/hir.2020.26.4.265</a></li>
+  </ol></div>
+</section>
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="chips"><span class="chip">Red Hat Certified System Administrator</span><span class="chip">AWS Solutions Architect – Associate</span><span class="chip">CCNA / CCNA Security</span><span class="chip">Splunk Accredited (Technical Selling, Sales Rep I &amp; II)</span><span class="chip">Google IT Support</span><span class="chip">Google Cybersecurity</span><span class="chip">Google Project Management</span></div>
+</section>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card"><h3><a href="https://github.com/awijesundara/ServiceOps">ServiceOps</a></h3><p class="muted">Self-hosted ITSM platform: incidents, changes, CMDB, SLAs and approvals, with an AI assistant.</p></div>
+    <div class="card"><h3><a href="https://github.com/awijesundara/FlowOps">FlowOps</a></h3><p class="muted">Dependency-aware runbook orchestration alongside ServiceOps.</p></div>
+    <div class="card"><h3><a href="https://github.com/awijesundara/Baseline">Baseline</a></h3><p class="muted">Agentless fleet inventory and OS, kernel and firmware baseline verification.</p></div>
+    <div class="card"><h3><a href="https://github.com/awijesundara/DIDAuth-IoTFW">DIDAuth-IoTFW</a></h3><p class="muted">Decentralized firmware authentication with DIDs and verifiable credentials.</p></div>
+  </div>
+</section>
+</main>
+<footer>© Anushka Wijesundara · Updated October 2026</footer>
+</body>
+</html>
