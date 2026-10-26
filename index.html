@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Anushka Wijesundara</title>
-<meta name="description" content="Anushka Wijesundara, D.Eng. Unix and Linux infrastructure engineer and IoT security researcher.">
+<meta name="description" content="Anushka Wijesundara, D.Eng. Unix and Linux infrastructure engineer researching IoT security, decentralized identity and Kubernetes software supply-chain security.">
+<link rel="canonical" href="https://awijesundara.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Anushka Wijesundara · Infrastructure &amp; Security Research">
+<meta property="og:description" content="Unix and Linux infrastructure engineering, IoT firmware authentication and Kubernetes container image provenance.">
+<meta property="og:url" content="https://awijesundara.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +23,11 @@
   --brand:#5cc4d4;--brand-soft:#16323a;
 }}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+:focus-visible{outline:3px solid var(--brand);outline-offset:4px}
+.skip{position:absolute;top:8px;left:20px;transform:translateY(-160%);padding:8px 16px;background:var(--bg);z-index:10}
+.skip:focus{transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -28,6 +37,10 @@ header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
 .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
 h1{margin:0;color:var(--ink);font-size:clamp(32px,6vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.02em}
 .title{margin:10px 0 0;font-size:18px;color:var(--muted);font-weight:500}
+.latest{margin:24px 0 0;padding:16px 20px;background:var(--surface);border-left:3px solid var(--brand);border-radius:0 8px 8px 0;font-size:15px}
+.latest p{margin:4px 0}
+.latest strong{color:var(--ink)}
+.pub-detail{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
 .summary{margin:22px 0 0;max-width:680px;font-size:17px}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .links a{display:inline-flex;align-items:center;padding:8px 16px;border:1px solid var(--line);border-radius:8px;color:var(--ink);font-size:14px;font-weight:600;transition:border-color .15s,background .15s}
@@ -76,30 +89,38 @@ footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);colo
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap">
     <p class="eyebrow">D.Eng · M.Eng · BSc</p>
     <h1>Anushka Wijesundara</h1>
-    <p class="title">Unix &amp; Linux Infrastructure Engineer · IoT Security Researcher</p>
-    <p class="summary">Unix and Linux infrastructure engineer with close to 10 years running mission-critical trading and financial systems across Japan, the UK and Sri Lanka. Doctor of Engineering researching decentralized firmware authentication for IoT. Fluent in English and Sinhala.</p>
+    <p class="title">Unix &amp; Linux Infrastructure Engineer · IoT &amp; Cloud-Native Security Researcher</p>
+    <p class="summary">Unix and Linux infrastructure engineer working on mission-critical trading and financial systems since 2016, with experience in Japan and Sri Lanka. Doctor of Engineering researching decentralized identity, IoT firmware authentication and Kubernetes container image provenance. Fluent in English and Sinhala, with basic Japanese.</p>
     <div class="links">
       <a href="https://www.linkedin.com/in/anushkawijesundara/">LinkedIn</a>
       <a href="https://github.com/awijesundara">GitHub</a>
+      <a href="https://orcid.org/0000-0002-7228-524X" rel="me">ORCID</a>
+      <a href="#publications">Publications</a>
       <a href="https://www.credly.com/users/wijesundara-mudiyanselage-anushka-bandara-wijesundara/badges/credly">Credly</a>
     </div>
+    <aside class="latest" aria-label="Latest publication">
+      <p><strong>Latest publication · <time datetime="2026-10-15">15 October 2026</time></strong></p>
+      <p><a href="https://www.nature.com/articles/s41598-026-72882-4">Contract bound verifiable credentials for replay resistant container image provenance in Kubernetes</a></p>
+      <p>Open-access research in <i>Scientific Reports</i> on binding container credentials to an image digest and blockchain contract context.</p>
+    </aside>
   </div>
 </header>
 
-<nav><div class="wrap">
+<nav aria-label="Main navigation"><div class="wrap">
   <a href="#experience">Experience</a><a href="#education">Education &amp; Research</a><a href="#skills">Skills</a><a href="#publications">Publications</a><a href="#certifications">Certifications</a><a href="#projects">Projects</a>
 </div></nav>
 
-<main class="wrap">
+<main id="main" class="wrap">
 <section id="experience">
   <h2>Experience</h2>
   <ul class="timeline">
     <li class="entry"><div class="when">2022 — Present</div><div>
-      <h3>Unix System Administrator</h3><p class="org">SBI Japannext Securities · Tokyo</p>
+      <h3>Unix System Administrator</h3><p class="org">Japannext Co., Ltd. · Tokyo</p>
       <ul>
         <li>Leads low-latency trading server builds, including BIOS and firmware tuning and CPU isolation.</li>
         <li>Plans and executes OS and firmware upgrades across large production and pre-production fleets.</li>
@@ -143,7 +164,7 @@ footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);colo
       <p><b>Fellow, “Cross the border! Tokyo Tech Pioneering Doctoral Research Project”</b>: a competitive doctoral fellowship funded by the Japan Science and Technology Agency (JST) under its SPRING program, awarded for up to three years with a monthly research stipend and annual research funding. Listed among the FY2022 recipients (<a href="https://www.spring-boost.i.isct.ac.jp/en/topics/4464/">recipient list</a>).</p>
     </div></li>
     <li class="entry"><div class="when">2018 — 2020</div><div>
-      <h3>Master of Engineering, Information and Communications Engineering</h3><p class="org">Institute of Science Tokyo (formerly Tokyo Institute of Technology)</p>
+      <h3>Master of Engineering, Information and Communications Engineering</h3><p class="org">Tokyo Institute of Technology (now Institute of Science Tokyo)</p>
       <div class="research"><b>Research:</b> Security-enhanced firmware management scheme for smart-home IoT devices using distributed ledger technologies (IOTA and IPFS).</div>
       <p><b>Awarded as an excellent presenter</b> at the research concept presentations, December 2019 (<a href="https://educ.titech.ac.jp/ict/eng/news/2019_12/058352.html">announcement</a>).</p>
     </div></li>
@@ -165,6 +186,7 @@ footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);colo
     <div><h3>Low-latency infrastructure</h3><div class="tags"><span class="tag">BIOS &amp; firmware tuning</span><span class="tag">CPU isolation</span><span class="tag">Network tuning</span><span class="tag">Time synchronization</span></div></div>
     <div><h3>Virtualization &amp; cloud</h3><div class="tags"><span class="tag">VMware</span><span class="tag">Kubernetes</span><span class="tag">AWS</span><span class="tag">GCP</span></div></div>
     <div><h3>Identity &amp; security</h3><div class="tags"><span class="tag">Identity &amp; access management</span><span class="tag">ISO 27001</span><span class="tag">Log analytics</span></div></div>
+    <div><h3>Security research</h3><div class="tags"><span class="tag">Decentralized identifiers</span><span class="tag">Verifiable credentials</span><span class="tag">IoT firmware authentication</span><span class="tag">Kubernetes admission control</span><span class="tag">Container image provenance</span><span class="tag">Ethereum Layer-2</span><span class="tag">IPFS</span></div></div>
     <div><h3>Storage &amp; hardware</h3><div class="tags"><span class="tag">NAS</span><span class="tag">Enterprise backup</span><span class="tag">Blade servers</span><span class="tag">SPARC</span></div></div>
   </div>
 </section>
@@ -172,18 +194,18 @@ footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);colo
 <section id="publications">
   <h2>Publications</h2>
   <ol class="pubs">
-    <li><b>DIDAuth-K8s: Contract Bound Verifiable Credentials for Replay Resistant Container Image Provenance in Kubernetes.</b> <span class="venue">Scientific Reports, under revision, 2026.</span></li>
-    <li><b>DIDAuth-IoTFW: Decentralized Firmware Authentication for Smart Home IoT Devices Using Verifiable Credentials.</b> <span class="venue">Internet of Things, 2025.</span> <a href="https://doi.org/10.1016/j.iot.2025.101788">DOI</a></li>
-    <li><b>Security-enhanced firmware management scheme for smart home IoT devices using distributed ledger technologies.</b> <span class="venue">International Journal of Information Security, 2024.</span> <a href="https://doi.org/10.1007/s10207-024-00827-x">DOI</a></li>
-    <li><b>Development of a firmware authenticating and updating scheme for smart home IoT devices using distributed ledger technologies.</b> <span class="venue">Computer Security Symposium, IPSJ, 2019.</span> <a href="http://id.nii.ac.jp/1001/00201316/">Link</a></li>
+    <li><b>Contract bound verifiable credentials for replay resistant container image provenance in Kubernetes.</b> <span class="venue">Scientific Reports, published 15 October 2026 (advance online publication).</span> <a href="https://doi.org/10.1038/s41598-026-72882-4">DOI</a><span class="pub-detail">W. M. A. B. Wijesundara, Joong-Sun Lee, YiNa Jeong and Takashi Obi. Open access.</span></li>
+    <li><b>DIDAuth-IoTFW: Decentralized Firmware Authentication for Smart Home IoT Devices Using Verifiable Credentials.</b> <span class="venue">Internet of Things, 34, 101788, 2025.</span> <a href="https://doi.org/10.1016/j.iot.2025.101788">DOI</a></li>
+    <li><b>Security-enhanced firmware management scheme for smart home IoT devices using distributed ledger technologies.</b> <span class="venue">International Journal of Information Security, 23, 1927–1937, 2024.</span> <a href="https://doi.org/10.1007/s10207-024-00827-x">DOI</a></li>
     <li><b>Application of Blockchain to Maintaining Patient Records in Electronic Health Record for Enhanced Privacy, Scalability, and Availability.</b> <span class="venue">Healthcare Informatics Research, 2020.</span> <a href="https://doi.org/10.4258/hir.2020.26.1.3">DOI</a></li>
     <li><b>Patient Consent Management by a Purpose-Based Consent Model for Electronic Health Record Based on Blockchain Technology.</b> <span class="venue">Healthcare Informatics Research, 2020.</span> <a href="https://doi.org/10.4258/hir.2020.26.4.265">DOI</a></li>
+    <li><b>Development of a firmware authenticating and updating scheme for smart home IoT devices using distributed ledger technologies.</b> <span class="venue">Computer Security Symposium, IPSJ, 2019.</span> <a href="https://id.nii.ac.jp/1001/00201316/">Link</a></li>
   </ol>
 </section>
 
 <section id="certifications">
-  <h2>Certifications</h2>
-  <p class="note">Verified badges on <a href="https://www.credly.com/users/wijesundara-mudiyanselage-anushka-bandara-wijesundara/badges/credly">Credly</a>.</p>
+  <h2>Certifications &amp; Professional Learning</h2>
+  <p class="note">Credentials and courses earned; see issue dates and current badge status on <a href="https://www.credly.com/users/wijesundara-mudiyanselage-anushka-bandara-wijesundara/badges/credly">Credly</a>.</p>
   <div class="tags">
     <span class="tag">Red Hat Certified System Administrator</span><span class="tag">AWS Certified Solutions Architect – Associate</span><span class="tag">CCNA / CCNA Security</span><span class="tag">Splunk Accredited (Technical Selling, Sales Rep I &amp; II)</span><span class="tag">Google IT Support</span><span class="tag">Google Cybersecurity</span><span class="tag">Google Project Management</span><span class="tag">CompTIA Security+: Social Engineering Techniques (course)</span>
   </div>
@@ -200,6 +222,6 @@ footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);colo
 </section>
 </main>
 
-<footer><div class="wrap">© Anushka Wijesundara</div></footer>
+<footer><div class="wrap">© Anushka Wijesundara · Updated <time datetime="2026-10-26">26 October 2026</time></div></footer>
 </body>
 </html>
